@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastre-se — FavelaViva</title>
+  <meta name="description" content="Formulário de cadastro de voluntários e apoiadores — FavelaViva.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/img/logo-favelaviva.png" alt="Logo FavelaViva" width="56" height="56">
+        <div class="brand-text"><h1 class="site-title">FavelaViva</h1></div>
+      </div>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" aria-current="page">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main container" role="main">
+    <h2>Formulário de Cadastro — FavelaViva</h2>
+    <p>Preencha seus dados para participar como voluntário, doador ou para solicitar auxílio. Campos obrigatórios estão marcados com <span aria-hidden="true">*</span>.</p>
+
+    <form id="cadastroForm" action="#" method="post" novalidate>
+
+      <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+        <input id="nome" name="nome" type="text" required minlength="3">
+
+        <label for="email">E-mail <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="cpf">CPF <span aria-hidden="true">*</span></label>
+        <input id="cpf" name="cpf" type="text" inputmode="numeric" required pattern="^\d{3}\.\d{3}\.\d{3}\-\d{2}$" maxlength="14" placeholder="000.000.000-00">
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" inputmode="tel" pattern="^\(\d{2}\)\s?\d{4,5}\-\d{4}$" placeholder="(00) 00000-0000">
+
+        <label for="nascimento">Data de nascimento</label>
+        <input id="nascimento" name="nascimento" type="date" max="${new Date().toISOString().split('T')[0]}">
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <label for="endereco">Endereço</label>
+        <input id="endereco" name="endereco" type="text">
+
+        <label for="cep">CEP</label>
+        <input id="cep" name="cep" type="text" inputmode="numeric" pattern="^\d{5}-?\d{3}$" maxlength="9" placeholder="00000-000">
+
+        <label for="cidade">Cidade</label>
+        <input id="cidade" name="cidade" type="text">
+
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado">
+          <option value="">Selecione</option>
+          <option value="MG">MG</option>
+          <option value="SP">SP</option>
+          <option value="RJ">RJ</option>
+          <option value="OUTRO">Outro</option>
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferências</legend>
+        <label><input type="checkbox" name="newsletter" value="sim"> Quero receber newsletter</label>
+        <label><input type="radio" name="perfil" value="voluntario" checked> Voluntário</label>
+        <label><input type="radio" name="perfil" value="doador"> Doador/Apoiador</label>
+        <label><input type="radio" name="perfil" value="solicitante"> Preciso de Ajuda</label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button class="btn" type="submit">Enviar cadastro</button>
+        <button class="btn btn-outline" type="reset">Limpar</button>
+      </div>
+
+      <div id="formErrors" aria-live="polite"></div>
+      <div id="formSuccess" class="form-success" role="status" aria-live="polite"></div>
+
+    </form>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year3"></span> FavelaViva</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/masks.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projetos — FavelaViva</title>
+  <meta name="description" content="Projetos da FavelaViva: mutirões, capacitação e assistência emergencial.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/img/logo-favelaviva.png" alt="Logo FavelaViva" width="56" height="56">
+        <div class="brand-text">
+          <h1 class="site-title">FavelaViva</h1>
+        </div>
+      </div>
+      <button id="navToggle2" class="nav-toggle" aria-controls="mainNav2" aria-expanded="false" aria-label="Abrir menu">☰</button>
+      <nav id="mainNav2" class="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main container" role="main">
+    <h2>Projetos em destaque</h2>
+
+    <section class="projects-list" aria-label="Lista de projetos">
+
+      <article class="project card" id="project-1">
+        <figure>
+          <picture>
+            <source srcset="assets/img/project1.jpg" type="image/jpg">
+            <img src="assets/img/project1.jpg" alt="Distribuição de cestas" loading="lazy">
+          </picture>
+          <figcaption>Mutirão de Cestas</figcaption>
+        </figure>
+        <div class="card-body">
+          <h3>Mutirão de Cestas Básicas</h3>
+          <p>Distribuição mensal de cestas para famílias em situação de insegurança alimentar.</p>
+          <ul class="project-meta">
+            <li>Famílias atendidas: 500</li>
+            <li>Meta: R$ 25.000</li>
+            <li>Progresso: 60%</li>
+          </ul>
+          <p class="card-actions">
+            <a class="btn" href="cadastro.html">Quero ajudar</a>
+            <a class="btn btn-outline" href="#">Doar</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project card" id="project-2">
+        <figure>
+          <picture>
+            <source srcset="assets/img/project2.png" type="image/png">
+            <img src="assets/img/project2.png" alt="Oficinas de capacitação" loading="lazy">
+          </picture>
+          <figcaption>Oficinas de Capacitação</figcaption>
+        </figure>
+        <div class="card-body">
+          <h3>Oficinas de Capacitação</h3>
+          <p>Curso de empreendedorismo local, aulas de tecnologia e geração de renda.</p>
+          <ul class="project-meta">
+            <li>Participantes: 180</li>
+            <li>Meta: R$ 10.000</li>
+            <li>Progresso: 40%</li>
+          </ul>
+          <p class="card-actions">
+            <a class="btn" href="cadastro.html">Quero voluntariar</a>
+            <a class="btn btn-outline" href="#">Doar</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project card" id="project-3">
+        <figure>
+          <picture>
+            <source srcset="assets/img/project3.png" type="image/png">
+            <img src="assets/img/project3.png" alt="Emergência financeira" loading="lazy">
+          </picture>
+          <figcaption>Assistência Emergencial</figcaption>
+        </figure>
+        <div class="card-body">
+          <h3>Assistência Emergencial</h3>
+          <p>Micro-ajudas, remediação de despesas básicas e encaminhamento para serviços públicos.</p>
+          <ul class="project-meta">
+            <li>Casos resolvidos: 320</li>
+            <li>Meta: R$ 8.000</li>
+            <li>Progresso: 75%</li>
+          </ul>
+          <p class="card-actions">
+            <a class="btn" href="cadastro.html">Quero voluntariar</a>
+            <a class="btn btn-outline" href="#">Doar</a>
+          </p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year2"></span> FavelaViva</p>
+    </div>
+  </footer>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <address id="contato">
+        <strong>FavelaViva</strong><br>
+        Rua Comunidade, 45 — Lago Azul, MG<br>
+        <a href="mailto:contato@favelaviva.org">contato@favelaviva.org</a>
+      </address>
+      <div class="legal">
+        <p>© <span id="year"></span> FavelaViva — Transparência e Ação Local.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/masks.js" defer></script>
+</body>
+</html>

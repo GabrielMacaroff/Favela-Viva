@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FavelaViva — Solidariedade e Ação Local</title>
+  <meta name="description" content="FavelaViva — Apoio a moradores de favelas: doações, voluntariado e projetos comunitários.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FavelaViva — Solidariedade e Ação Local">
+  <meta property="og:description" content="Apoiando moradores de favelas com doações, kits, cursos e suporte emergencial.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/img/logo-favelaviva.png" alt="Logo FavelaViva" width="56" height="56">
+        <div class="brand-text">
+          <h1 class="site-title">FavelaViva</h1>
+          <p class="tagline">Solidariedade e Ação Local</p>
+        </div>
+      </div>
+
+      <button id="navToggle" class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <nav id="mainNav" class="main-nav" role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main" role="main">
+    <section class="hero hero-gradient">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h2>Transformando viços em oportunidades — juntos com a comunidade</h2>
+          <p>FavelaViva organiza ações de emergência, campanhas de arrecadação e programas de capacitação para moradores de favelas. Doe, seja voluntário ou compartilhe.</p>
+          <p class="hero-cta">
+            <a class="btn" href="projetos.html">Ver Projetos</a>
+            <a class="btn btn-outline" href="cadastro.html">Quero Ajudar</a>
+          </p>
+        </div>
+        <figure class="hero-figure">
+          <picture>
+            <source srcset="assets/img/hero-favela.jpg" type="image/jpg">
+            <img src="assets/img/hero-favela.jpg" alt="Voluntários e comunidade em mutirão" loading="lazy">
+          </picture>
+          <figcaption>Mutirão comunitário coordenado pela FavelaViva</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="indicators container" aria-labelledby="indicadores-title">
+      <h3 id="indicadores-title">Nossos números</h3>
+      <ul class="grid grid-3 stat-cards">
+        <li class="stat">
+          <strong>+200</strong>
+          <span>Atendimentos emergenciais</span>
+        </li>
+        <li class="stat">
+          <strong>4.800</strong>
+          <span>Famílias assistidas</span>
+        </li>
+        <li class="stat">
+          <strong>1.400</strong>
+          <span>Voluntários engajados</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="highlights container" aria-labelledby="destaques-title">
+      <h3 id="destaques-title">Como ajudamos</h3>
+      <div class="grid grid-3">
+        <div class="card highlight">
+          <h4>Kits Essenciais</h4>
+          <p>Distribuição de alimentos e kits de higiene em ações mensais.</p>
+        </div>
+        <div class="card highlight">
+          <h4>Capacitação</h4>
+          <p>Oficinas de geração de renda, alfabetização digital e empreendedorismo.</p>
+        </div>
+        <div class="card highlight">
+          <h4>Emergência Financeira</h4>
+          <p>Micro-ajudas financeiras para emergências e mediação com serviços públicos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta container" aria-labelledby="cta-title">
+      <h3 id="cta-title">Participe — Sua ação transforma</h3>
+      <p>Doe recursos, materiais ou seu tempo. A união faz a diferença.</p>
+      <a class="btn" href="cadastro.html">Quero Ajudar</a>
+    </section>
+
+    <section class="news container" aria-labelledby="news-title">
+      <h3 id="news-title">Últimas ações</h3>
+      <article class="card">
+        <h4><a href="#">Mutirão: 500 cestas entregues na Comunidade Bela Vista</a></h4>
+        <p>Resumo rápido da ação. Transparência e prestação de contas disponíveis no portal.</p>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <address id="contato">
+        <strong>FavelaViva</strong><br>
+        Rua Comunidade, 45 — Lago Azul, MG<br>
+        <a href="mailto:contato@favelaviva.org">contato@favelaviva.org</a>
+      </address>
+      <div class="legal">
+        <p>© <span id="year"></span> FavelaViva — Transparência e Ação Local.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/masks.js" defer></script>
+</body>
+</html>
