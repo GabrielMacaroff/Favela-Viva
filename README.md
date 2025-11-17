@@ -1,6 +1,6 @@
 # FavelaViva — Plataforma Front-end (Entrega)
 
-**FavelaViva** Favela Viva é uma ONG dedicada a transformar vidas dentro da comunidade. Atuamos com ações de assistência financeira, oficinas de capacitação profissional e diversos projetos que promovem dignidade, autonomia e oportunidades reais para quem mais precisa. Junte-se a nós e faça parte dessa mudança!
+**FavelaViva** é uma ONG focada em apoiar moradores de favelas com assistência emergencial, kits essenciais, capacitação e articulação com redes públicas.
 
 ## O projeto
 Front-end responsivo, acessível e pronto para publicação via GitHub Pages. Conteúdo: `index.html`, `projetos.html`, `cadastro.html`, `css/styles.css`, `js/masks.js`.

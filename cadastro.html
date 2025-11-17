@@ -41,13 +41,13 @@
         <input id="email" name="email" type="email" required>
 
         <label for="cpf">CPF <span aria-hidden="true">*</span></label>
-        <input id="cpf" name="cpf" type="text" inputmode="numeric" required pattern="^\d{3}\.\d{3}\.\d{3}\-\d{2}$" maxlength="14" placeholder="000.000.000-00">
+        <input id="cpf" name="cpf" type="text" inputmode="numeric" required pattern="^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$" maxlength="14" placeholder="000.000.000-00">
 
         <label for="telefone">Telefone</label>
-        <input id="telefone" name="telefone" type="tel" inputmode="tel" pattern="^\(\d{2}\)\s?\d{4,5}\-\d{4}$" placeholder="(00) 00000-0000">
+        <input id="telefone" name="telefone" type="tel" inputmode="tel" pattern="^\\(\\d{2}\\)\\s?\\d{4,5}\\-\\d{4}$" placeholder="(00) 00000-0000">
 
         <label for="nascimento">Data de nascimento</label>
-        <input id="nascimento" name="nascimento" type="date" max="${new Date().toISOString().split('T')[0]}">
+        <input id="nascimento" name="nascimento" type="date">
 
       </fieldset>
 
@@ -58,7 +58,7 @@
         <input id="endereco" name="endereco" type="text">
 
         <label for="cep">CEP</label>
-        <input id="cep" name="cep" type="text" inputmode="numeric" pattern="^\d{5}-?\d{3}$" maxlength="9" placeholder="00000-000">
+        <input id="cep" name="cep" type="text" inputmode="numeric" pattern="^\\d{5}-?\\d{3}$" maxlength="9" placeholder="00000-000">
 
         <label for="cidade">Cidade</label>
         <input id="cidade" name="cidade" type="text">
@@ -87,7 +87,7 @@
         <button class="btn btn-outline" type="reset">Limpar</button>
       </div>
 
-      <div id="formErrors" aria-live="polite"></div>
+      <div id="formErrors" aria-live="polite" class="form-error" role="status"></div>
       <div id="formSuccess" class="form-success" role="status" aria-live="polite"></div>
 
     </form>
@@ -100,9 +100,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year3').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
   <script src="js/masks.js" defer></script>
 </body>
 </html>

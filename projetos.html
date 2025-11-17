@@ -34,15 +34,15 @@
 
     <section class="projects-list" aria-label="Lista de projetos">
 
-      <article class="project card" id="project-1">
-        <figure>
+      <article class="project card grid-12" id="project-1">
+        <figure class="col-span-4">
           <picture>
             <source srcset="assets/img/project1.jpg" type="image/jpg">
             <img src="assets/img/project1.jpg" alt="Distribuição de cestas" loading="lazy">
           </picture>
           <figcaption>Mutirão de Cestas</figcaption>
         </figure>
-        <div class="card-body">
+        <div class="card-body col-span-8">
           <h3>Mutirão de Cestas Básicas</h3>
           <p>Distribuição mensal de cestas para famílias em situação de insegurança alimentar.</p>
           <ul class="project-meta">
@@ -57,15 +57,15 @@
         </div>
       </article>
 
-      <article class="project card" id="project-2">
-        <figure>
+      <article class="project card grid-12" id="project-2">
+        <figure class="col-span-4">
           <picture>
             <source srcset="assets/img/project2.png" type="image/png">
             <img src="assets/img/project2.png" alt="Oficinas de capacitação" loading="lazy">
           </picture>
           <figcaption>Oficinas de Capacitação</figcaption>
         </figure>
-        <div class="card-body">
+        <div class="card-body col-span-8">
           <h3>Oficinas de Capacitação</h3>
           <p>Curso de empreendedorismo local, aulas de tecnologia e geração de renda.</p>
           <ul class="project-meta">
@@ -80,15 +80,15 @@
         </div>
       </article>
 
-      <article class="project card" id="project-3">
-        <figure>
+      <article class="project card grid-12" id="project-3">
+        <figure class="col-span-4">
           <picture>
             <source srcset="assets/img/project3.png" type="image/png">
             <img src="assets/img/project3.png" alt="Emergência financeira" loading="lazy">
           </picture>
           <figcaption>Assistência Emergencial</figcaption>
         </figure>
-        <div class="card-body">
+        <div class="card-body col-span-8">
           <h3>Assistência Emergencial</h3>
           <p>Micro-ajudas, remediação de despesas básicas e encaminhamento para serviços públicos.</p>
           <ul class="project-meta">
@@ -125,9 +125,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year2').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
   <script src="js/masks.js" defer></script>
 </body>
 </html>

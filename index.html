@@ -7,11 +7,6 @@
   <meta name="description" content="FavelaViva — Apoio a moradores de favelas: doações, voluntariado e projetos comunitários.">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="FavelaViva — Solidariedade e Ação Local">
-  <meta property="og:description" content="Apoiando moradores de favelas com doações, kits, cursos e suporte emergencial.">
-  <meta property="og:type" content="website">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -35,7 +30,14 @@
       <nav id="mainNav" class="main-nav" role="navigation" aria-label="Menu principal">
         <ul>
           <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
+          <li class="dropdown">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Projetos ▾</button>
+            <div class="dropdown-menu" role="menu">
+              <a role="menuitem" href="projetos.html">Todos os projetos</a>
+              <a role="menuitem" href="projetos.html#project-1">Mutirões</a>
+              <a role="menuitem" href="projetos.html#project-2">Capacitação</a>
+            </div>
+          </li>
           <li><a href="cadastro.html">Cadastre-se</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
@@ -45,22 +47,55 @@
 
   <main id="main" class="site-main" role="main">
     <section class="hero hero-gradient">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h2>Transformando viços em oportunidades — juntos com a comunidade</h2>
+      <div class="container hero-inner grid-12">
+        <div class="hero-copy col-span-7">
+          <h2>Transformando vícios em oportunidades — juntos com a comunidade</h2>
           <p>FavelaViva organiza ações de emergência, campanhas de arrecadação e programas de capacitação para moradores de favelas. Doe, seja voluntário ou compartilhe.</p>
           <p class="hero-cta">
             <a class="btn" href="projetos.html">Ver Projetos</a>
             <a class="btn btn-outline" href="cadastro.html">Quero Ajudar</a>
           </p>
         </div>
-        <figure class="hero-figure">
-          <picture>
-            <source srcset="assets/img/hero-favela.jpg" type="image/jpg">
-            <img src="assets/img/hero-favela.jpg" alt="Voluntários e comunidade em mutirão" loading="lazy">
-          </picture>
-          <figcaption>Mutirão comunitário coordenado pela FavelaViva</figcaption>
-        </figure>
+
+        <!-- INÍCIO: Hero carousel -->
+        <div class="hero-carousel col-span-5" aria-roledescription="carousel" aria-label="Galeria de projetos">
+          <div class="carousel-track" id="carouselTrack" tabindex="0" aria-live="polite">
+            <!-- Slides: cada slide tem img + caption -->
+            <div class="carousel-slide" data-index="0" aria-hidden="false">
+              <img src="assets/img/logo-favelaviva.png" alt="Logo FavelaViva" loading="lazy">
+              <div class="carousel-caption">FavelaViva — Nossa missão</div>
+            </div>
+
+            <div class="carousel-slide" data-index="1" aria-hidden="true">
+              <img src="assets/img/project1.jpg" alt="Mutirão de cestas — distribuição" loading="lazy">
+              <div class="carousel-caption">Mutirão: distribuição de cestas</div>
+            </div>
+
+            <div class="carousel-slide" data-index="2" aria-hidden="true">
+              <img src="assets/img/project2.png" alt="Oficinas de capacitação" loading="lazy">
+              <div class="carousel-caption">Oficinas de Capacitação</div>
+            </div>
+
+            <div class="carousel-slide" data-index="3" aria-hidden="true">
+              <img src="assets/img/project3.png" alt="Assistência emergencial" loading="lazy">
+              <div class="carousel-caption">Assistência Emergencial</div>
+            </div>
+          </div>
+
+          <!-- Indicadores -->
+          <div class="carousel-indicators" role="tablist" aria-label="Indicadores do carrossel" id="carouselIndicators">
+            <button class="indicator" data-slide-to="0" aria-controls="carouselTrack" aria-selected="true" title="Slide 1"></button>
+            <button class="indicator" data-slide-to="1" aria-controls="carouselTrack" aria-selected="false" title="Slide 2"></button>
+            <button class="indicator" data-slide-to="2" aria-controls="carouselTrack" aria-selected="false" title="Slide 3"></button>
+            <button class="indicator" data-slide-to="3" aria-controls="carouselTrack" aria-selected="false" title="Slide 4"></button>
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control carousel-prev" id="carouselPrev" aria-label="Slide anterior">‹</button>
+          <button class="carousel-control carousel-next" id="carouselNext" aria-label="Próximo slide">›</button>
+        </div>
+        <!-- FIM: Hero carousel -->
+
       </div>
     </section>
 
@@ -129,9 +164,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="js/masks.js" defer></script>
 </body>
 </html>
